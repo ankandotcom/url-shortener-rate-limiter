@@ -130,12 +130,12 @@ router.get("/urls", async (req, res) => {
 });
 
 // DELETE /api/urls/all — delete all URLs
-router.delete('/urls/all', async (req, res) => {
+router.delete("/urls/all", async (req, res) => {
   try {
     await Url.deleteMany({});
-    res.json({ success: true, message: 'All URLs deleted' });
+    res.json({ success: true, message: "All URLs deleted" });
   } catch (err) {
-    res.status(500).json({ success: false, error: 'Server error' });
+    res.status(500).json({ success: false, error: "Server error" });
   }
 });
 
