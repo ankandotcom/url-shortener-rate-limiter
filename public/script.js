@@ -1,4 +1,4 @@
-const BASE = 'https://url-shortener-api-twmp.onrender.com'; // same origin; change to 'http://localhost:5000' if serving separately
+const BASE = 'https://lnkr-69a9.onrender.com'; // same origin; change to 'http://localhost:5000' if serving separately
 let currentShortUrl = '';
 
 // ── Shorten URL ──────────────────────────────────────────────────────────────
