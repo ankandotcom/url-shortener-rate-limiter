@@ -181,3 +181,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   loadUrls();
 });
+
+async function clearAll() {
+  if (!confirm('Delete all shortened URLs? This cannot be undone.')) return;
+
+  try {
+    const res  = await fetch(`${BASE}/api/urls/all`, { method: 'DELETE' });
+    const data = await res.json();
+
+    if (data.success) {
+      document.getElementById('urlList').innerHTML =
+        `<p class="mono text-sm text-center py-8" style="color:var(--muted)">No URLs yet. Shorten one above!</p>`;
+      document.getElementById('resultCard').style.display = 'none';
+    }
+  } catch (err) {
+    showError('Could not clear URLs. Is the server running?');
+  }
+}
