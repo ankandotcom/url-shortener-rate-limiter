@@ -2,6 +2,9 @@
 
 A full-stack URL shortener with rate limiting, analytics, and a modern UI.
 
+**[Live Demo Link →](https://url-shortener-rate-limiter.vercel.app/)**
+--
+
 ## Tech Stack
 - **Frontend**: HTML, Tailwind CSS, Vanilla JS
 - **Backend**: Node.js, Express.js
